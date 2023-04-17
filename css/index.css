@@ -1,9 +1,9 @@
 :root {
     --dark-gray : #1a2a32;
     --light-gray: #d3d3d3;
-    --gray: #436b83;
-    --violet: blueviolet;
-    --yellow: orange;
+    --gray: #39505d;
+    --violet: #8a2be2;
+    --orange: orange;
 
 }
 
@@ -22,6 +22,14 @@ html, body {
     color:aliceblue;
 }
 
+body {
+    padding: 90px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 80px);
@@ -29,8 +37,24 @@ html, body {
     gap: 5px;
 }
 
+@media (min-width: 768px) {
+    /* .grid {
+        width: 490px;
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: 50px repeat(3, 150px) 60px;
+        gap: 20px;
+    } */
+}
+
 .turn {
-    background-color: var(--yellow);
+    /* background-color: var(--orange); */
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-self: center;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .square {
@@ -42,3 +66,20 @@ html, body {
     background-color: var(--violet);
 }
 
+.actions {
+    background-color: green;
+}
+
+footer {
+    color: white;
+    margin-top: 50px;
+}
+
+footer p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: blue;
+}
